@@ -1,4 +1,4 @@
-# mesh.css
+# Mesh
 
 Mesh is a tiny and powerful CSS grid system.
 
@@ -12,7 +12,7 @@ Please read through our code style guides:
 - [CSS](https://github.com/mercadolibre/css-style-guide)
 
 
-## Maintained with ❤ by
+## Maintained by
 
 - Her Mammana ([@hmammana](https://twitter.com/hmammana))
 - Lean Linares ([@lean8086](https://twitter.com/lean8086))
