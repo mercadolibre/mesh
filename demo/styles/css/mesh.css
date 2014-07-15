@@ -30,6 +30,8 @@
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .mesh-xxs-1,
