@@ -10,14 +10,16 @@
     "gulp-cache": "^0.1.1",
     "gulp-clean": "^0.2.4",
     "gulp-csso": "^0.2.6",
+    "gulp-git": "^0.4.3",
+    "gulp-less": "^1.2.3",
     "gulp-livereload": "^1.2.0",
     "gulp-load-plugins": "^0.5.0",
-    "gulp-size": "^0.3.0",
-    "opn": "^0.1.1",
-    "wiredep": "^1.4.3",
-    "gulp-less": "^1.2.3",
     "gulp-recess": "^0.3.0",
-    "gulp-rename": "^1.2.0"
+    "gulp-rename": "^1.2.0",
+    "gulp-size": "^0.3.0",
+    "gulp-subtree": "^0.1.0",
+    "opn": "^0.1.1",
+    "wiredep": "^1.4.3"
   },
   "engines": {
     "node": ">=0.10.0"

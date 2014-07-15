@@ -44,6 +44,13 @@ gulp.task('demo', function () {
         .pipe($.size());
 });
 
+gulp.task('upload-demo',['demo'], function () {
+    return gulp.src('demo')
+        .pipe($.subtree({
+            message: 'Demo upload'
+        }));
+});
+
 gulp.task('clean', function () {
     return gulp.src(['.tmp', 'dist'], { read: false }).pipe($.clean());
 });

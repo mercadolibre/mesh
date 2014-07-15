@@ -7,6 +7,8 @@ Mesh is a responsive, mobile first fluid grid system, built on LESS, for easy cu
 - Run `npm install && bower install` in the command line to install project dependencies.
 - Run `gulp` to build dist files. 
 - Run `gulp watch` to create a server in node and run the demo in the browser.
+- Run `gulp demo` to create a working demo of the component in a "demo" folder.
+- Run `gulp upload-demo` to automagically push last changes go the demo page in gh-pages branch.
 
 ## Use guide
 
@@ -38,6 +40,8 @@ The available classes to target different screen resolutions are:
 
 In the variables.less file you can customize mesh. Change the breakpoints, set the total number of columns if you disslike 12, and change the gutter size.
 After changing the settings don't forget to re-build the component running the `gulp` command, the css files are compiled in the dist folder ready to be used in your personal project.
+
+[Demo page](http://jota-v.github.io/mesh/)
 
 **NOTE**
 
