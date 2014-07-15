@@ -81,7 +81,7 @@
 .mesh-12 {
   width: 100%;
 }
-@media (min-width: 340px) {
+@media (min-width: 320px) {
   .mesh-xs-1 {
     width: 8.33333333%;
   }

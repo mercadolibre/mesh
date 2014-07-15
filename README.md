@@ -27,7 +27,7 @@ It is <strong>recommended</strong> to wrap your grids in a `.row` element. This 
 The available classes to target different screen resolutions are:
 
 - `.mesh-xxs-` 0px and up. 
-- `.mesh-xs-` Targets phone devices and up (340px =<).
+- `.mesh-xs-` Targets phone devices and up (320px =<).
 - `.mesh-s-` Targets large screen phone devices and up (480px =<). 
 - `.mesh-m-` Targets tablet devices and up (768 =<).
 - `.mesh-l-` Targets landscape tablets and small dektops and up (1024 =<).
