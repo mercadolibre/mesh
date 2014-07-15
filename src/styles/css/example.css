@@ -1,0 +1,206 @@
+/*  Media queries breakpoints
+-------------------------------------------*/
+/* Grid settings
+-------------------------------------------*/
+@font-face {
+  font-family: 'BLOKKRegular';
+  src: url('../fonts/BLOKKNeue-Regular.eot');
+  src: url('../fonts/BLOKKNeue-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/BLOKKNeue-Regular.woff') format('woff'), url('../fonts/BLOKKNeue-Regular.svg#BLOKKRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'icons';
+  src: url('../fonts/icons.eot');
+  src: url('../fonts/icons.eot?#iefix') format('embedded-opentype'), url('../fonts/icons.woff') format('woff'), url('../fonts/icons.svg#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  /* for better scroll fluidity in mobile webkit devices */
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-weight: 400;
+}
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 29px;
+}
+h3 {
+  font-size: 23px;
+}
+h4 {
+  font-size: 18px;
+}
+a {
+  color: #0637b3;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.color-danger {
+  color: #F6898D;
+}
+.color-warning {
+  color: #ffeb26;
+}
+.color-success {
+  color: #44cc00;
+}
+body {
+  padding-top: 55px;
+  margin: 0;
+  font: 14px/1.4 "BLOKKRegular", helvetica, arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #555555;
+}
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 55px;
+  background: #fff059;
+  border-bottom: 1px solid #d9d9d9;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.title {
+  margin-bottom: 12px;
+  text-align: center;
+}
+.side-title {
+  margin-top: 0;
+}
+.title-line {
+  width: 40%;
+  max-width: 350px;
+  margin: 0 auto 40px;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid #dddddd;
+}
+.product-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.ch-price {
+  margin-top: 10px;
+  font: 32px Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  color: #990000;
+}
+.btn-mock {
+  padding: 10px 15px;
+  color: white;
+  background: #4074f9;
+  border: 0;
+  border-radius: 8px;
+}
+.btn-mock:hover {
+  background: #2762f8;
+}
+.with-border {
+  border-left: 1px solid #dddddd;
+}
+.reputation-box {
+  padding: 15px 25px;
+  margin-bottom: 25px;
+  background: #f4f4f4;
+  border-radius: 5px;
+}
+.product-description-box {
+  min-height: 100px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+}
+.product-description-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  margin: 15px auto 25px;
+}
+@media (max-width: 420px) {
+  .product-description-box {
+    border-radius: 0;
+  }
+}
+.short-description {
+  padding: 15px 0;
+  margin-bottom: 50px;
+  background: #f4f4f4;
+}
+.short-description .row {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.short-description .ch-carousel-mask {
+  margin: 0;
+}
+.short-description .ch-carousel-pages {
+  margin: -7px auto 10px;
+}
+.short-description .ch-price {
+  margin-bottom: 30px;
+}
+.short-description .payment-info {
+  margin-bottom: 45px;
+}
+.short-description .shipping-info {
+  margin-bottom: 45px;
+}
+.short-description .shipping-info span {
+  color: #339900;
+}
+.short-description .btn-buy {
+  display: block;
+  min-width: 160px;
+  margin-bottom: 20px;
+  line-height: 27px;
+}
+@media (max-width: 420px) {
+  .short-description .btn-buy {
+    width: 94%;
+    margin: 0 auto 30px;
+  }
+}
+.seller-info {
+  margin-bottom: 80px;
+}
+@media (max-width: 420px) {
+  .seller-info .link-more-info {
+    padding-left: 15px;
+  }
+}
+/*Col Demo
+---------------------------------------------*/
+.col-demo {
+  margin: 50px 0 100px;
+  font-family: Arial, Helvetica, "Nimbus Sans L", sans-serif;
+}
+.col-demo .col {
+  padding: 20px 10px;
+  background: #f4f4f4;
+  border: 1px solid #d9d9d9;
+}
