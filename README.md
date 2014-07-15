@@ -20,17 +20,19 @@ You can also have a more complex responsive layout where in mobile your columns 
 
 You can use as many elements in your container but they must add up to 12 so you do not have empty spaces in your grid.
 
+It is <strong>recommended</strong> to wrap your grids in a `.row` element. This helper clears the floats and resets the left gutter from the first element and the right gutter from the last one.
+
 The available classes to target different screen resolutions are:
 
-- `.mesh-xs-` Phone devices and up.
-- `.mesh-s-` Targets tablet devices and up.
-- `.mesh-m-` Targets landscape tablets and small dektops and up.
-- `.mesh-l-` Targets desktops 1200px and up.
+- `.mesh-xxs-` 0px and up. 
+- `.mesh-xs-` Targets phone devices and up (340px =<).
+- `.mesh-s-` Targets large screen phone devices and up (480px =<). 
+- `.mesh-m-` Targets tablet devices and up (768 =<).
+- `.mesh-l-` Targets landscape tablets and small dektops and up (1024 =<).
+- `.mesh-xl-` Targets landscape tablets and small dektops and up (1200 =<).
 
-Basic class:
+<strong>Basic class</strong>:
 - `.mesh-` Is device agnostic, uses the same width proportion through all devices and resolutions.
-
-It is <strong>recommended</strong> to wrap your grids in a `.row` element. This helper clears the floats and resets the left gutter from the first element and the right gutter from the last one.
 
 ## Options
 
