@@ -125,7 +125,7 @@ body {
 }
 
 .container {
-  max-width: @screen-l;
+  max-width: 1000px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -148,6 +148,15 @@ body {
   border-top: 1px solid @gray-lighter;
 }
 
+@media (max-width: (@screen-s)) {
+  .item-carousel {
+    padding: 0;
+  }
+}
+
+.ch-carousel-item {
+  .size(495px, 495px);
+}
 .product-img {
   display: block;
   .size(100%, auto);
@@ -218,7 +227,7 @@ body {
   }
 
   .ch-carousel-pages {
-    margin: -7px auto 10px;
+    margin: 0 auto 10px;
   }
 
   .ch-price {

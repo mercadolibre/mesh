@@ -73,7 +73,7 @@ body {
   border-bottom: 1px solid #d9d9d9;
 }
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -91,6 +91,15 @@ body {
   background: transparent;
   border: 0;
   border-top: 1px solid #dddddd;
+}
+@media (max-width: 768px) {
+  .item-carousel {
+    padding: 0;
+  }
+}
+.ch-carousel-item {
+  width: 495px;
+  height: 495px;
 }
 .product-img {
   display: block;
@@ -155,7 +164,7 @@ body {
   margin: 0;
 }
 .short-description .ch-carousel-pages {
-  margin: -7px auto 10px;
+  margin: 0 auto 10px;
 }
 .short-description .ch-price {
   margin-bottom: 30px;
