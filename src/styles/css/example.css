@@ -4,19 +4,14 @@
 -------------------------------------------*/
 @font-face {
   font-family: 'BLOKKRegular';
-  src: url('../fonts/BLOKKNeue-Regular.eot');
-  src: url('../fonts/BLOKKNeue-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/BLOKKNeue-Regular.woff') format('woff'), url('../fonts/BLOKKNeue-Regular.svg#BLOKKRegular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'icons';
-  src: url('../fonts/icons.eot');
-  src: url('../fonts/icons.eot?#iefix') format('embedded-opentype'), url('../fonts/icons.woff') format('woff'), url('../fonts/icons.svg#icons') format('svg');
+  src: url('../../fonts/BLOKKNeue-Regular.eot');
+  src: url('../../fonts/BLOKKNeue-Regular.eot?#iefix') format('embedded-opentype'), url('../../fonts/BLOKKNeue-Regular.woff') format('woff'), url('../../fonts/BLOKKNeue-Regular.svg#BLOKKRegular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 html {
@@ -79,6 +74,7 @@ body {
 }
 .container {
   max-width: 1200px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 .title {
@@ -141,7 +137,7 @@ body {
   max-width: 800px;
   margin: 15px auto 25px;
 }
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .product-description-box {
     border-radius: 0;
   }
@@ -177,9 +173,10 @@ body {
   display: block;
   min-width: 160px;
   margin-bottom: 20px;
+  font-family: "BLOKKRegular", helvetica, arial, sans-serif;
   line-height: 27px;
 }
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .short-description .btn-buy {
     width: 94%;
     margin: 0 auto 30px;
@@ -188,7 +185,7 @@ body {
 .seller-info {
   margin-bottom: 80px;
 }
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .seller-info .link-more-info {
     padding-left: 15px;
   }
@@ -199,7 +196,7 @@ body {
   margin: 50px 0 100px;
   font-family: Arial, Helvetica, "Nimbus Sans L", sans-serif;
 }
-.col-demo .col {
+.col-demo [class*="mesh"] {
   padding: 20px 10px;
   background: #f4f4f4;
   border: 1px solid #d9d9d9;

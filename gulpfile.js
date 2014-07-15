@@ -34,8 +34,14 @@ gulp.task('watch-styles', function () {
           noOverqualifying: false,
           noUniversalSelectors: false
         }))
-        .pipe($.autoprefixer('last 1 version'))
+        .pipe($.autoprefixer())
         .pipe(gulp.dest('src/styles/css'));
+});
+
+gulp.task('demo', function () {
+    return gulp.src(['src/*/**', 'src/index.html'])
+        .pipe(gulp.dest('demo'))
+        .pipe($.size());
 });
 
 gulp.task('clean', function () {
