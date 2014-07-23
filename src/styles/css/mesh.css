@@ -13,15 +13,15 @@
 .row:after {
   clear: both;
 }
-.row-no-margin {
+.row-no-reset {
   margin: 0;
 }
-.row-no-margin:before,
-.row-no-margin:after {
+.row-no-reset:before,
+.row-no-reset:after {
   display: table;
   content: " ";
 }
-.row-no-margin:after {
+.row-no-reset:after {
   clear: both;
 }
 [class*="mesh"] {

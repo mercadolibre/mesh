@@ -1,4 +1,4 @@
-# Mesh v.4.0.0
+# Mesh v.4.0.1
 
 Mesh is a responsive, mobile first fluid grid system, built on LESS, for easy customization.
 
@@ -14,7 +14,7 @@ Mesh is a responsive, mobile first fluid grid system, built on LESS, for easy cu
 
 By default mesh uses a 12 column grid system: it divides the space available by 12.
 
-To give your columns the desired width use the class `.mesh-` + the number of columns out of 12 you want this element to measure. The columns must add 12 for them to cover the whole space available. By defualt mesh generates a gutter of 30px bretween columns.
+To give your columns the desired width use the class `.mesh-[1-12]` + the number of columns out of 12 you want this element to measure. The columns must add 12 for them to cover the whole space available. By defualt mesh generates a gutter of 30px bretween columns.
 
 For example you can have `<div class="mesh-3"></div>` next to a `<div class="mesh-9"></div>` element to have a layout with a narrow side-bar and a wide main conetent area. Between both they add up twelve.
 
@@ -26,15 +26,15 @@ It is <strong>recommended</strong> to wrap your grids in a `.row` element. This 
 
 The available classes to target different screen resolutions are:
 
-- `.mesh-xxs-` 0px and up. 
-- `.mesh-xs-` Targets phone devices and up (320px =<).
-- `.mesh-s-` Targets large screen phone devices and up (480px =<). 
-- `.mesh-m-` Targets tablet devices and up (768 =<).
-- `.mesh-l-` Targets landscape tablets and small dektops and up (1024 =<).
-- `.mesh-xl-` Targets landscape tablets and small dektops and up (1200 =<).
+- `.mesh-xxs-[1-12]` 0px and up. 
+- `.mesh-xs-[1-12]` Targets phone devices and up (320px =<).
+- `.mesh-s-[1-12]` Targets large screen phone devices and up (480px =<). 
+- `.mesh-m-[1-12]` Targets tablet devices and up (768 =<).
+- `.mesh-l-[1-12]` Targets landscape tablets and small dektops and up (1024 =<).
+- `.mesh-xl-[1-12]` Targets landscape tablets and small dektops and up (1200 =<).
 
 <strong>Basic class</strong>:
-- `.mesh-` Is device agnostic, uses the same width proportion through all devices and resolutions.
+- `.mesh-[1-12]` Is device agnostic, uses the same width proportion through all devices and resolutions.
 
 ## Options
 
@@ -54,8 +54,6 @@ Please read through our code style guides:
 
 - Her Mammana ([@hmammana](https://twitter.com/hmammana))
 - Lean Linares ([@lean8086](https://twitter.com/lean8086))
-- Guille Paz ([@pazguille](https://twitter.com/pazguille))
-- Nati Devalle ([@taly](https://twitter.com/taly))
 - Juan Vanni ([@jota_v_](https://twitter.com/jota_v_))
 
 

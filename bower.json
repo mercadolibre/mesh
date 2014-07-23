@@ -1,9 +1,10 @@
 {
-  "name": "gridless",
+  "name": "mesh",
   "private": true,
   "dependencies": {
-    "jquery": "~1.11.0",
-    "chico": "https://github.com/mercadolibre/chico.git#~1.1.1"
+    "jquery": "~1.11.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chico": "https://github.com/mercadolibre/chico.git#~1.1.1"
+  }
 }

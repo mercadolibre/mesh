@@ -13,15 +13,15 @@
 .row:after {
   clear: both;
 }
-.row-no-margin {
+.row-no-reset {
   margin: 0;
 }
-.row-no-margin:before,
-.row-no-margin:after {
+.row-no-reset:before,
+.row-no-reset:after {
   display: table;
   content: " ";
 }
-.row-no-margin:after {
+.row-no-reset:after {
   clear: both;
 }
 [class*="mesh"] {
@@ -81,7 +81,7 @@
 .mesh-12 {
   width: 100%;
 }
-@media (min-width: 340px) {
+@media (min-width: 320px) {
   .mesh-xs-1 {
     width: 8.33333333%;
   }
