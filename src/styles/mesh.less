@@ -1,21 +1,12 @@
 @import "variables.less";
 
 // Creates a wrapper for a series of columns.
-.row {
+.mesh-row {
   margin: 0 (@gutter-total-width / -2);
 
-  &:before,
-  &:after {
-    display: table;
-    content: " ";
+  &.no-reset {
+    margin: 0;
   }
-  &:after {
-    clear: both;
-  }
-}
-
-.row-no-reset {
-  margin: 0;
 
   &:before,
   &:after {
@@ -28,7 +19,12 @@
 }
 
 // Columns basic styles
-[class*="mesh"] {
+[class*="mesh-xxs"],
+[class*="mesh-xs"],
+[class*="mesh-s"],
+[class*="mesh-m"],
+[class*="mesh-l"],
+[class*="mesh-xl"] {
   position: relative;
   float: left;
   width: 100%;
@@ -352,4 +348,3 @@
     .column-size(12);
   }
 }
-

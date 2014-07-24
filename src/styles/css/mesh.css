@@ -2,29 +2,26 @@
 -------------------------------------------*/
 /* Grid settings
 -------------------------------------------*/
-.row {
+.mesh-row {
   margin: 0 -15px;
 }
-.row:before,
-.row:after {
-  display: table;
-  content: " ";
-}
-.row:after {
-  clear: both;
-}
-.row-no-reset {
+.mesh-row.no-reset {
   margin: 0;
 }
-.row-no-reset:before,
-.row-no-reset:after {
+.mesh-row:before,
+.mesh-row:after {
   display: table;
   content: " ";
 }
-.row-no-reset:after {
+.mesh-row:after {
   clear: both;
 }
-[class*="mesh"] {
+[class*="mesh-xxs"],
+[class*="mesh-xs"],
+[class*="mesh-s"],
+[class*="mesh-m"],
+[class*="mesh-l"],
+[class*="mesh-xl"] {
   position: relative;
   float: left;
   width: 100%;
@@ -233,7 +230,7 @@
     width: 100%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .mesh-xl-1 {
     width: 8.33333333%;
   }
