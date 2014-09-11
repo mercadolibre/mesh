@@ -4,6 +4,5 @@ npm-debug.log
 src/bower_components
 test/bower_components
 .DS_Store
-.editorconfig
 .jshintrc
 thumb.db
