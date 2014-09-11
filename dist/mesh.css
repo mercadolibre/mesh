@@ -230,7 +230,7 @@
     width: 100%;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .mesh-xl-1 {
     width: 8.33333333%;
   }
