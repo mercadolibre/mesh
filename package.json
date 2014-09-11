@@ -1,36 +1,27 @@
 {
   "name": "mesh",
   "version": "4.0.0",
-  "description": "Mesh is a tiny and powerful CSS grid system.",
-  "author": "<chico@mercadolibre.com>",
-  "contributors": [
-    {
-      "name": "Guille Paz",
-      "email": "guille87paz@gmail.com"
-    },
-    {
-      "name": "Her Mammana",
-      "email": "hernanmammana@gmail.com"
-    },
-    {
-      "name": "Lean Linares",
-      "email": "lean8086@gmail.com"
-    }
-  ],
-  "scripts": {
-    "build": "grunt dist"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mercadolibre/mesh.git"
-  },
   "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-banner": "~0.2.0",
-    "grunt-contrib-cssmin": "0.6.1",
-    "grunt-contrib-copy": "~0.4.1"
+    "connect": "^2.14.4",
+    "connect-livereload": "^0.4.0",
+    "gulp": "^3.6.0",
+    "gulp-autoprefixer": "^0.0.7",
+    "gulp-cache": "^0.1.1",
+    "gulp-clean": "^0.2.4",
+    "gulp-csso": "^0.2.6",
+    "gulp-git": "^0.4.3",
+    "gulp-less": "^1.2.3",
+    "gulp-livereload": "^1.2.0",
+    "gulp-load-plugins": "^0.5.0",
+    "gulp-recess": "^0.3.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-size": "^0.3.0",
+    "gulp-subtree": "^0.1.0",
+    "opn": "^0.1.1",
+    "wiredep": "^1.4.3"
   },
-  "license": "MIT",
-  "engine": "node >= 0.8.6"
+  "engines": {
+    "node": ">=0.10.0"
+  }
 }

@@ -1,0 +1,9 @@
+{
+  "name": "mesh",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "chico": "https://github.com/mercadolibre/chico.git#~1.1.1",
+    "jquery": "~2.1.1"
+  }
+}

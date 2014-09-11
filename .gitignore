@@ -1,5 +1,9 @@
-# OS or Editor folders
-.DS_Store
-thumb.db
 node_modules
 npm-debug.log
+.tmp
+src/bower_components
+test/bower_components
+.DS_Store
+.editorconfig
+.jshintrc
+thumb.db

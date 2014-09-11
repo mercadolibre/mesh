@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Carousel Test</title>
+        <link rel="stylesheet" type="text/css" href="/ui/css">
+        <link rel="stylesheet" type="text/css" href="/vendor/jasmine/jasmine.css">
+        <style>
+            .ch-carousel-item {
+                width: 250px;
+                height: 182px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Carousel</h1>
+        <div class="carousel1 ch-carousel">
+            <ul>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+            </ul>
+        </div>
+
+        <div class="carousel2 ch-carousel">
+            <ul>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+            </ul>
+        </div>
+
+        <div class="carousel3 ch-carousel">
+            <ul>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+            </ul>
+        </div>
+
+        <div class="carousel4 ch-carousel">
+            <ul>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+                <li><img src="http://chico-ui.com.ar/src/assets/ninja.png"></li>
+            </ul>
+        </div>
+
+        <script src="/vendor/jasmine/jasmine.js"></script>
+        <script src="/vendor/jasmine/jasmine-html.js"></script>
+        <script src="/vendor/jquery.js"></script>
+        <script src="/ui/js"></script>
+        <script src="./spect.js"></script>
+        <script>
+            (function() {
+                var jasmineEnv = jasmine.getEnv();
+                jasmineEnv.updateInterval = 1000;
+
+                var htmlReporter = new jasmine.HtmlReporter();
+
+                jasmineEnv.addReporter(htmlReporter);
+
+                jasmineEnv.specFilter = function(spec) {
+                    return htmlReporter.specFilter(spec);
+                };
+
+                var currentWindowOnload = window.onload;
+
+                window.onload = function() {
+                    if (currentWindowOnload) {
+                        currentWindowOnload();
+                    }
+                    execJasmine();
+                };
+
+                function execJasmine() {
+                    jasmineEnv.execute();
+                }
+            })();
+        </script>
+    </body>
+</html>
