@@ -15,15 +15,14 @@ Mesh is a responsive, mobile first fluid grid system, built on LESS, for easy cu
 
 By default mesh uses a 12 column grid system: it divides the space available by 12.
 
-To give your columns the desired width use the class `.mesh-col-#` + the number of columns out of 12 you want this element to measure. The columns must add 12 for them to cover the whole space available. By default mesh generates a gutter of 30px between columns.
+To give your columns the desired width, use the class .mesh-col-# + the number of columns you want this element to measure. The columns must add up 12 to cover the whole space available. By default, the gutter between each column is 30px.
 
-For example you can have `<div class="mesh-col-3"></div>` next to a `<div class="mesh-col-9"></div>` element to have a layout with a narrow side-bar and a wide main content area. Between both they add up twelve.
+E.g., you can have a `<div class="mesh-col-3"></div>` next to a `<div class="mesh-col-9"></div>`. This is a narrow side-bar and a main content area layout. Both add up 12. 
 
-You can also have a more complex responsive layout where in mobile your columns use all the space available of the container and stack up one below the other, but from tablets up they split to be next to each other. In this case you may have to use a `<div class="mesh-col-xs-12 mesh-col-s-4"></div>` next to a `<div class="mesh-col-xs-12 mesh-col-s-8"></div>`.
-
+In mobile devices your columns will also use all the space available (as in desktop) but stack up one below the other while from tablets they end up next to each other. E.g., `<div class="mesh-col-xs-12 mesh-col-s-4"></div>` next to a `<div class="mesh-col-xs-12 mesh-col-s-8"></div>`.
 You can use as many elements in your container but they must add up to 12 so you do not have empty spaces in your grid.
 
-It is __recommended__ to wrap your grids in a `.mesh-row` element. This helper clears the floats and resets the left gutter from the first element and the right gutter from the last one.
+You can use as many elements in your container as you want, but they must always add up 12. Otherwise, you'll end up with undesired spaces in your grid.
 
 The available classes to target different screen resolutions are:
 
