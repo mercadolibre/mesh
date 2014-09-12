@@ -1,4 +1,4 @@
-@import "variables.less";
+@import 'variables.less';
 
 @font-face {
     font-family: 'BLOKKRegular';
@@ -26,8 +26,8 @@
 
 //Font
 @font-size-base:          14px;
-@font-family-sans-serif:  Arial,Helvetica,"Nimbus Sans L",sans-serif;
-@font-family-blokk:       "BLOKKRegular", helvetica, arial, sans-serif;
+@font-family-sans-serif:  Arial,Helvetica,'Nimbus Sans L',sans-serif;
+@font-family-blokk:       'BLOKKRegular', helvetica, arial, sans-serif;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 @font-size-h1:            floor((@font-size-base * 2.3)); // ~36px
@@ -56,7 +56,7 @@
 
 html {
   /* for better scroll fluidity in mobile webkit devices */
-  overflow-y: scroll; 
+  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -207,7 +207,7 @@ body {
     margin: 15px auto 25px;
   }
 
-  @media (max-width: (@screen-xs)) { 
+  @media (max-width: (@screen-xs)) {
     border-radius: 0;
   }
 }
@@ -217,7 +217,7 @@ body {
   margin-bottom: 50px;
   background: @gray-lightest;
 
-  .row {
+  .mesh-row {
     max-width: 900px;
     margin: 0 auto;
   }
@@ -253,7 +253,7 @@ body {
     font-family: @font-family-blokk;
     line-height: 27px;
 
-    @media (max-width: (@screen-xs)) { 
+    @media (max-width: (@screen-xs)) {
       width: 94%;
       margin: 0 auto 30px;
     }
@@ -263,7 +263,7 @@ body {
 .seller-info {
   margin-bottom: 80px;
 
-  @media (max-width: (@screen-xs)) { 
+  @media (max-width: (@screen-xs)) {
     .link-more-info {
       padding-left: (@gutter-total-width / 2);
     }
@@ -276,12 +276,7 @@ body {
   margin: 50px 0 100px;
   font-family: @font-family-sans-serif;
 
-  [class*="mesh-xxs"],
-  [class*="mesh-xs"],
-  [class*="mesh-s"],
-  [class*="mesh-m"],
-  [class*="mesh-l"],
-  [class*="mesh-xl"] {
+  [class*='mesh-col-'] {
     padding: 20px 10px;
     background: @gray-lightest;
     border: 1px solid @gray-light;
