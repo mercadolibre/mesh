@@ -23,7 +23,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-family: Arial, Helvetica, 'Nimbus Sans L', sans-serif;
   font-weight: 400;
 }
 h1 {
@@ -57,7 +57,7 @@ a:hover {
 body {
   padding-top: 55px;
   margin: 0;
-  font: 14px/1.4 "BLOKKRegular", helvetica, arial, sans-serif;
+  font: 14px/1.4 'BLOKKRegular', helvetica, arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #555555;
 }
@@ -109,7 +109,7 @@ body {
 }
 .ch-price {
   margin-top: 10px;
-  font: 32px Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font: 32px Arial, Helvetica, 'Nimbus Sans L', sans-serif;
   color: #990000;
 }
 .btn-mock {
@@ -156,7 +156,7 @@ body {
   margin-bottom: 50px;
   background: #f4f4f4;
 }
-.short-description .row {
+.short-description .mesh-row {
   max-width: 900px;
   margin: 0 auto;
 }
@@ -182,7 +182,7 @@ body {
   display: block;
   min-width: 160px;
   margin-bottom: 20px;
-  font-family: "BLOKKRegular", helvetica, arial, sans-serif;
+  font-family: 'BLOKKRegular', helvetica, arial, sans-serif;
   line-height: 27px;
 }
 @media (max-width: 480px) {
@@ -203,14 +203,9 @@ body {
 ---------------------------------------------*/
 .col-demo {
   margin: 50px 0 100px;
-  font-family: Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-family: Arial, Helvetica, 'Nimbus Sans L', sans-serif;
 }
-.col-demo [class*="mesh-xxs"],
-.col-demo [class*="mesh-xs"],
-.col-demo [class*="mesh-s"],
-.col-demo [class*="mesh-m"],
-.col-demo [class*="mesh-l"],
-.col-demo [class*="mesh-xl"] {
+.col-demo [class*='mesh-col-'] {
   padding: 20px 10px;
   background: #f4f4f4;
   border: 1px solid #d9d9d9;

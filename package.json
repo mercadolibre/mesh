@@ -1,6 +1,6 @@
 {
   "name": "mesh",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "dependencies": {},
   "devDependencies": {
     "connect": "^2.14.4",
