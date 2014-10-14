@@ -38,7 +38,8 @@
 .mesh-col-3 {
   width: 25%;
 }
-.mesh-col-xxs-4 .mesh-col-4 {
+.mesh-col-xxs-4,
+.mesh-col-4 {
   width: 33.33333333%;
 }
 .mesh-col-xxs-5,
