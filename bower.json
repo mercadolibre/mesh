@@ -1,9 +1,20 @@
 {
-  "name": "mesh",
-  "private": true,
-  "dependencies": {},
-  "devDependencies": {
-    "chico": "https://github.com/mercadolibre/chico.git#~1.1.1",
-    "jquery": "~2.1.1"
-  }
+    "name": "Mesh",
+    "description": "A tiny yet powerful grid system",
+    "version": "5.0.0",
+    "authors": "MercadoLibre",
+    "main": "src/mesh.scss",
+    "keywords": [
+        "grid-system",
+        "grid",
+        "grids",
+        "responsive",
+        "rwd",
+        "sass"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/mercadolibre/mesh.git"
+    },
+    "license": "MIT"
 }
