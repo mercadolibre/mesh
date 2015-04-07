@@ -1,26 +1,43 @@
 'use strict';
 
-var gulp = require('gulp');
+/* > Settings
+   ---------------------------------------------------------------- */
+
+/* >> Modules
+   ------------------------------------------------------ */
+
+// Gulp
 var batch = require('gulp-batch');
-var clean = require('del');
+var gulp = require('gulp');
 var header = require('gulp-header');
-var optimize = require('gulp-minify-css');
-var project = require('./package.json');
+var minify = require('gulp-minify-css');
 var prefix = require('gulp-autoprefixer');
 var preprocess = require('gulp-sass');
 var rename = require('gulp-rename');
 var size = require('gulp-size');
 var watch = require('gulp-watch');
 
-var headerLong = ['/**',
-  ' * <%= project.name %>',
-  ' * <%= project.description %>',
-  ' * @version v<%= project.version %>',
-  ' * @license <%= project.license %>',
-  ' */',
-  ''].join('\n');
+// Others
+var del = require('del');
+var mesh = require('./package.json');
 
-var headerShort = '/*! <%= project.name %> v<%= project.version %> | <%= project.license %> */\n';
+/* >> Headers
+   ------------------------------------------------------ */
+
+var headerLong =
+    [
+        '/**',
+        ' * <%= package.name %>',
+        ' * <%= package.description %>',
+        ' * @version v<%= package.version %>',
+        ' * @license <%= package.license %>',
+        ' */\n\n'
+    ].join('\n');
+
+var headerShort = '/*! <%= package.name %> v<%= package.version %> | <%= package.license %> */\n';
+
+/* > Tasks
+   ---------------------------------------------------------------- */
 
 gulp.task('compile', function() {
     return gulp.src('./src/*.scss')
@@ -28,20 +45,20 @@ gulp.task('compile', function() {
         // TODO: define supported browsers.
         .pipe(prefix())
         // TODO: apply correct coding style.
-        .pipe(header(headerLong, {project: project}))
+        .pipe(header(headerLong, {package: mesh}))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('optimize', ['compile'], function() {
     return gulp.src('./dist/*.css')
-        .pipe(optimize())
-        .pipe(header(headerShort, {project: project}))
+        .pipe(minify())
+        .pipe(header(headerShort, {package: mesh}))
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('clean', function() {
-    clean(['./dist/*']);
+    del(['./dist/*']);
 });
 
 gulp.task('watch', function() {
