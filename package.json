@@ -3,6 +3,7 @@
     "version": "5.0.0-alpha",
     "description": "A tiny yet powerful grid system",
     "author": "MercadoLibre",
+    "license": "MIT",
     "repository": {
         "type": "git",
         "url": "git://github.com/mercadolibre/mesh.git"
@@ -10,10 +11,14 @@
     "devDependencies": {
         "del": "^0.1.3",
         "gulp": "^3.8.11",
-        "gulp-sass": "^1.3.3",
         "gulp-autoprefixer": "^2.1.0",
+        "gulp-batch": "^1.0.5",
+        "gulp-header": "^1.2.2",
         "gulp-minify-css": "^1.0.0",
-        "gulp-rename": "^1.2.2"
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "^1.3.3",
+        "gulp-size": "^1.2.1",
+        "gulp-watch": "^4.2.3"
     },
     "engines": {
         "node": ">=0.10.0"

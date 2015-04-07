@@ -1,6 +1,8 @@
 /**
  * Mesh
- * A tiny yet powerful grid system.
+ * A tiny yet powerful grid system
+ * @version v5.0.0-alpha
+ * @license MIT
  */
 .mh-grid {
   padding: 0;
