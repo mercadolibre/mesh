@@ -38,43 +38,21 @@ $mesh: (
     )
 ) !default;
 
-// >> Helper methods
+// >> Helper function
 // ------------------------------------------------------ //
 
-// TODO: DRY methods!
+@function get-mesh-map($keys...) {
+    $map: $mesh;
 
-@function get-mesh-property($property) {
-    $context: map-get($mesh, properties);
-
-    @if map-has-key($context, $property) {
-        @return map-get($context, $property);
-    } @else {
-        @error 'The `#{$property}` key does not exist in `$mesh` map.';
+    @each $key in $keys {
+        @if map-has-key($map, $key) {
+            $map: map-get($map, $key);
+        } @else {
+            @error 'The `#{$key}` key does not exist in `$mesh` map.';
+        }
     }
-}
 
-@function get-mesh-breakpoints() {
-    @return map-keys(map-get($mesh, breakpoints));
-}
-
-@function get-mesh-breakpoint-name($breakpoint) {
-    $context: map-get(map-get($mesh, breakpoints), $breakpoint);
-
-    @if map-has-key($context, name) {
-        @return map-get($context, name);
-    } @else {
-        @error 'The `#{$breakpoint}` key does not exist in `$mesh` map.';
-    }
-}
-
-@function get-mesh-breakpoint-value($breakpoint) {
-    $context: map-get(map-get($mesh, breakpoints), $breakpoint);
-
-    @if map-has-key($context, value) {
-        @return map-get($context, value);
-    } @else {
-        @error 'The `#{$breakpoint}` key does not exist in `$mesh` map.';
-    }
+    @return $map;
 }
 
 // > Grid
@@ -111,26 +89,25 @@ $mesh: (
     width: 100%;
 }
 
-// TODO: DRY loops!
 // TODO: consider adding `pull` and `push` classes.
 
 // >>> Width-agnostic cells
 // -------------------------------------------- //
 
-@for $columns from 1 through get-mesh-property(columns) {
+@for $columns from 1 through get-mesh-map(properties, columns) {
     .mh-grid__cell--#{$columns} {
-        width: percentage($columns / get-mesh-property(columns));
+        width: percentage($columns / get-mesh-map(properties, columns));
     }
 }
 
 // >>> Responsive cells
 // -------------------------------------------- //
 
-@each $breakpoint in get-mesh-breakpoints() {
-    @media only screen and (min-width: get-mesh-breakpoint-value($breakpoint)) {
-        @for $columns from 1 through get-mesh-property(columns) {
-            .mh-grid__cell--#{get-mesh-breakpoint-name($breakpoint)}-#{$columns} {
-                width: percentage($columns / get-mesh-property(columns));
+@each $breakpoint in map-keys(get-mesh-map(breakpoints)) {
+    @media only screen and (min-width: get-mesh-map(breakpoints, $breakpoint, value)) {
+        @for $columns from 1 through get-mesh-map(properties, columns) {
+            .mh-grid__cell--#{get-mesh-map(breakpoints, $breakpoint, name)}-#{$columns} {
+                width: percentage($columns / get-mesh-map(properties, columns));
             }
         }
     }
