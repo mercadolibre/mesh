@@ -61,7 +61,7 @@ $mesh: (
 .mh-grid {
     padding: 0;
     // Convert to negative value.
-    margin: 0 (get-mesh-property(gutter) * -1);
+    margin: 0 (get-mesh-map(properties, gutter) * -1);
 
     &:before,
     &:after {
@@ -84,7 +84,7 @@ $mesh: (
 .mh-grid__cell {
     box-sizing: border-box;
     float: left;
-    padding: 0 get-mesh-property(gutter);
+    padding: 0 get-mesh-map(properties, gutter);
     position: relative;
     width: 100%;
 }
