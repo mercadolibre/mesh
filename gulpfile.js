@@ -7,7 +7,6 @@
    ------------------------------------------------------ */
 
 // Gulp
-var batch = require('gulp-batch');
 var gulp = require('gulp');
 var header = require('gulp-header');
 var minify = require('gulp-minify-css');
@@ -15,7 +14,6 @@ var prefix = require('gulp-autoprefixer');
 var preprocess = require('gulp-sass');
 var rename = require('gulp-rename');
 var size = require('gulp-size');
-var watch = require('gulp-watch');
 
 // Others
 var del = require('del');
@@ -61,10 +59,8 @@ gulp.task('clean', function() {
     del(['./dist/*']);
 });
 
-gulp.task('watch', function() {
-    watch('./src/*.scss', batch(function() {
-        gulp.start('build');
-    }));
+gulp.task('watch', ['build'], function() {
+    gulp.watch('./src/*.scss', ['build']);
 });
 
 gulp.task('build', ['clean', 'compile', 'optimize'], function() {
