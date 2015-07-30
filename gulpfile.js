@@ -39,7 +39,7 @@ var headerShort = '/*! <%= package.name %> v<%= package.version %> | <%= package
 
 gulp.task('compile', function() {
     return gulp.src('./src/*.scss')
-        .pipe(preprocess({outputStyle: 'expanded', precision: 2}))
+        .pipe(preprocess({outputStyle: 'expanded', indentWidth: 4, precision: 2}))
         // TODO: define supported browsers.
         .pipe(prefix())
         // TODO: apply correct coding style.
