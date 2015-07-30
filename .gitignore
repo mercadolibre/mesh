@@ -1,2 +1,26 @@
-node_modules/
+# OS
+._*
+.DS_Store
+Thumbs.db
+
+# Editor
+*.sublime-project
+*.sublime-workspace
+*.swo
+*.swp
+.cache
+.idea
+.project
+.settings
+.tmproj
+
+# Packages
+bower_components
+node_modules
+
+# Others
+*.diff
+*.err
 *.log
+*.orig
+*.rej
