@@ -40,8 +40,7 @@ var headerShort = '/*! <%= package.name %> v<%= package.version %> | <%= package
 gulp.task('compile', function() {
     return gulp.src('./src/*.scss')
         .pipe(preprocess({outputStyle: 'expanded', indentWidth: 4, precision: 2}))
-        // TODO: define supported browsers.
-        .pipe(prefix())
+        .pipe(prefix({browsers: ['last 5 versions', 'android >= 2.1', '> 1%'], cascade: false}))
         .pipe(header(headerLong, {package: mesh}))
         .pipe(gulp.dest('./dist/'));
 });
