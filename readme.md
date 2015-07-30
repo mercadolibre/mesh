@@ -31,7 +31,7 @@ It's important to keep in mind that:
 
 - A grid contains a given number of cells —up to 12.
 - The size of each cell can be defined for every breakpoint.
-- Grids can only have cells as (first) childs.
+- Grids can only have cells as (first) child.
 - Grids or cells should never be styled.
 - Grids can be nested.
 - The content goes inside the cells.
