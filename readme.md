@@ -102,7 +102,7 @@ Size, keys and class names:
 If you want to customize Mesh, you only need [Node](https://nodejs.org/)
 *^0.10.0* and [Gulp](http://gulpjs.com/) *^3.9.0* up and running.
 
-Since the only thing that you'll be probably modifying is the `$mesh` map and
+Since the only thing that you'll probably be modifying is the `$mesh` map and
 its values, we assume you know how to do it. Knock yourself up!
 
 ## Contributing
