@@ -1,66 +1,114 @@
 # Mesh
 
-Mesh is a responsive, mobile first fluid grid system, built on LESS, for easy customization.
+A tiny yet powerful grid system.
 
-## Development setup
+## Overview
 
-- Clone
-- Run `npm install && bower install` in the command line to install project dependencies.
-- Run `gulp` to build dist files. 
-- Run `gulp watch` to create a server in node and run the demo in the browser.
-- Run `gulp demo` to create a working demo of the component in a "demo" folder.
-- Run `gulp upload-demo` to automagically push last changes go the demo page in gh-pages branch.
+Mesh is a 12-column grid system built to help you develop with ease.
+Key features:
 
-## Use guide
+- Mobile-fist and responsive.
+- Fluid columns.
+- Fixed gutters.
+- Infinite nesting.
 
-By default mesh uses a 12 column grid system: it divides the space available by 12.
+To all that, add progressive enhancement, since Mesh has width-agnostic columns
+to support those old browsers that don't know what media-queries are.
 
-To give your columns the desired width, use the class .mesh-col-# + the number of columns you want this element to measure. The columns must add up 12 to cover the whole space available. By default, the gutter between each column is 30px.
+## Usage
 
-E.g., you can have a `<div class="mesh-col-3"></div>` next to a `<div class="mesh-col-9"></div>`. This is a narrow side-bar and a main content area layout. Both add up 12. 
+To get started just [download the minified file](dist/mesh.min.css) and include
+it into your project.
 
-In mobile devices your columns will also use all the space available (as in desktop) but stack up one below the other while from tablets they end up next to each other. E.g., `<div class="mesh-col-xs-12 mesh-col-s-4"></div>` next to a `<div class="mesh-col-xs-12 mesh-col-s-8"></div>`.
-You can use as many elements in your container but they must add up to 12 so you do not have empty spaces in your grid.
+```html
+<link href="styles/mesh.min.css" rel="stylesheet" />
+```
 
-You can use as many elements in your container as you want, but they must always add up 12. Otherwise, you'll end up with undesired spaces in your grid.
+### How it works
 
-The available classes to target different screen resolutions are:
+It's important to keep in mind that:
 
-- `.mesh-col-xxs-[1-12]` 0px and up.
-- `.mesh-col-xs-[1-12]` Targets phone devices and up (320px =<).
-- `.mesh-col-s-[1-12]` Targets large screen phone devices and up (480px =<).
-- `.mesh-col-m-[1-12]` Targets tablet devices and up (768 =<).
-- `.mesh-col-l-[1-12]` Targets landscape tablets, laptops, desktops and up (1024 =<).
-- `.mesh-col-xl-[1-12]` Targets big desktops and up (1200 =<).
+- A grid contains a given number of cells —up to 12.
+- The size of each cell can be defined for every breakpoint.
+- Grids can only have cells as (first) childs.
+- Grids or cells should never be styled.
+- Grids can be nested.
+- The content goes inside the cells.
 
-__Basic class__:
-- `.mesh-col-[1-12]` Is device agnostic, uses the same width proportion through all devices and resolutions.
+### Examples
+
+Let's see some examples.
+
+- A grid with width-agnostic cells:
+
+    ```html
+    <div class="mh-grid">
+        <div class="mh-grid__cell mh-grid__cell--4"> ... </div>
+        <div class="mh-grid__cell mh-grid__cell--4"> ... </div>
+        <div class="mh-grid__cell mh-grid__cell--4"> ... </div>
+    </div>
+    ```
+
+- Columns with different sizes for small and large breakpoints:
+
+    ```html
+    <div class="mh-grid">
+        <div class="mh-grid__cell mh-grid__cell--s-12 mh-grid__cell--l-3"> ... </div>
+        <div class="mh-grid__cell mh-grid__cell--s-12 mh-grid__cell--l-9"> ... </div>
+    </div>
+    ```
+
+- A nested grid:
+
+    ```html
+    <div class="mh-grid">
+        <div class="mh-grid__cell mh-grid__cell--4">
+            <div class="mh-grid">
+                <div class="mh-grid__cell mh-grid__cell--6"> ... </div>
+                <div class="mh-grid__cell mh-grid__cell--6"> ... </div>
+            </div>
+        </div>
+        <div class="mh-grid__cell mh-grid__cell--4"> ... </div>
+        <div class="mh-grid__cell mh-grid__cell--4"> ... </div>
+    </div>
+    ```
+
+- Grid without gutter correction:
+
+    ```html
+    <div class="mh-grid mh-grid--no-gutter-correction">
+        <div class="mh-grid__cell mh-grid__cell--6"> ... </div>
+        <div class="mh-grid__cell mh-grid__cell--6"> ... </div>
+    </div>
+    ```
 
 ## Options
 
-In the variables.less file you can customize mesh. Change the breakpoints, set the total number of columns if you dislike 12, and change the gutter size.
-After changing the settings don't forget to re-build the component running the `gulp` command, the css files are compiled in the dist folder ready to be used in your personal project.
+Size, keys and class names:
 
-[Demo page](http://jota-v.github.io/mesh/)
+| Size     | Key    | Applies  | Class name           |
+|----------|--------|----------|----------------------|
+| Agnostic | *None* | *Always* | mh-grid__cell--*     |
+| Smallest | xxs    | ≥ 0px    | mh-grid__cell--xxs-* |
+| Smaller  | xs     | ≥ 320px  | mh-grid__cell--xs-*  |
+| Small    | s      | ≥ 480px  | mh-grid__cell--s-*   |
+| Medium   | m      | ≥ 768px  | mh-grid__cell--m-*   |
+| Large    | l      | ≥ 1024px | mh-grid__cell--l-*   |
+| Larger   | xl     | ≥ 1200px | mh-grid__cell--xl-*  |
 
-__NOTE__
+## Customization
 
-Please read through our code style guides:
-- [HTML](https://github.com/mercadolibre/html-style-guide)
-- [CSS](https://github.com/mercadolibre/css-style-guide)
+If you want to customize Mesh, you only need [Node](https://nodejs.org/)
+*^0.10.0* and [Gulp](http://gulpjs.com/) *^3.9.0* up and running.
 
-## Maintained by
+Since the only thing that you'll be probably modifying is the `$mesh` map and
+its values, we assume you know how to do it. Knock yourself up!
 
-- Her Mammana ([@hmammana](https://twitter.com/hmammana))
-- Lean Linares ([@lean8086](https://twitter.com/lean8086))
-- Juan Vanni ([@jota_v_](https://twitter.com/jota_v_))
+## Contributing
 
-## Credits
-
-![MercadoLibre](http://static.mlstatic.com/org-img/chico/img/logo-mercadolibre-new.png)
+Contributions are welcome! Please, read the
+[contribution guidelines](contributing.md) first.
 
 ## License
 
-Licensed under the MIT license.
-
-Copyright (c) 2013 [MercadoLibre](http://github.com/mercadolibre).
+© 2013-2015 MercadoLibre. Licensed under the MIT license.
