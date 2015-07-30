@@ -11,6 +11,7 @@ Key features:
 - Fluid columns.
 - Fixed gutters.
 - Infinite nesting.
+- 533 bytes (minified and gzipped)
 
 To all that, add progressive enhancement, since Mesh has width-agnostic columns
 to support those old browsers that don't know what media-queries are.
