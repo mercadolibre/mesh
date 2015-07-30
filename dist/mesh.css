@@ -25,6 +25,7 @@
 }
 
 .mh-grid__cell {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left;
     padding: 0 15px;
