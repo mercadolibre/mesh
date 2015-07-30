@@ -42,7 +42,6 @@ gulp.task('compile', function() {
         .pipe(preprocess({outputStyle: 'expanded', indentWidth: 4, precision: 2}))
         // TODO: define supported browsers.
         .pipe(prefix())
-        // TODO: apply correct coding style.
         .pipe(header(headerLong, {package: mesh}))
         .pipe(gulp.dest('./dist/'));
 });
