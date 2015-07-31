@@ -10,7 +10,7 @@ Please ensure all your contributions adheres to the following guidelines.
 
 ### Commits
 
-- Use [sentence case](http://en.wiktionary.org/wiki/sentence_case) for the
+- Use [sentence case](https://en.wiktionary.org/wiki/sentence_case) for the
   commit title and message.
 - Start the commit title with a verb and use present tense.
 
