@@ -4,8 +4,7 @@
 Thumbs.db
 
 # Editor
-*.sublime-project
-*.sublime-workspace
+*.sublime*
 *.swo
 *.swp
 .cache
