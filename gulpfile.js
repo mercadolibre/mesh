@@ -7,17 +7,17 @@
    ------------------------------------------------------ */
 
 // Gulp
-var gulp = require('gulp');
-var header = require('gulp-header');
-var minify = require('gulp-minify-css');
-var prefix = require('gulp-autoprefixer');
-var preprocess = require('gulp-sass');
-var rename = require('gulp-rename');
-var size = require('gulp-size');
+var gulp = require('gulp'),
+    header = require('gulp-header'),
+    minify = require('gulp-minify-css'),
+    prefix = require('gulp-autoprefixer'),
+    preprocess = require('gulp-sass'),
+    rename = require('gulp-rename'),
+    size = require('gulp-size');
 
 // Others
-var del = require('del');
-var mesh = require('./package.json');
+var del = require('del'),
+    mesh = require('./package.json');
 
 /* >> Headers
    ------------------------------------------------------ */
