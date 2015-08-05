@@ -128,4 +128,4 @@ you have read the [contribution guidelines](contributing.md) first.
 
 ## License
 
-© 2013-2015 MercadoLibre. Licensed under the MIT license.
+© 2013-2015 MercadoLibre. Licensed under the [MIT license](license.txt).
