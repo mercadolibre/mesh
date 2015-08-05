@@ -113,8 +113,8 @@ We aim to support the following browsers:
 - Firefox *latest 5*
 - Internet Explorer *8+*
 - Opera *latest 5*
-- Safari *6+*
-- iOS Safari *6+*
+- Safari *latest 5*
+- iOS Safari *latest 5*
 - Android Browser *2.1+*
 
 While Mesh might work fine in other browsers or older versions, we can only
