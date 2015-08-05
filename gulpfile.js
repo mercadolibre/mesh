@@ -22,15 +22,14 @@ var del = require('del'),
 /* >> Headers
    ------------------------------------------------------ */
 
-var headerLong =
-    [
-        '/**',
-        ' * <%= package.name %>',
-        ' * <%= package.description %>',
-        ' * @version v<%= package.version %>',
-        ' * @license <%= package.license %>',
-        ' */\n\n'
-    ].join('\n');
+var headerLong = [
+    '/**',
+    ' * <%= package.name %>',
+    ' * <%= package.description %>',
+    ' * @version v<%= package.version %>',
+    ' * @license <%= package.license %>',
+    ' */\n\n'
+].join('\n');
 
 var headerShort = '/*! <%= package.name %> v<%= package.version %> | <%= package.license %> */\n';
 
