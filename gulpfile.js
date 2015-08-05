@@ -8,6 +8,7 @@
 
 // Gulp
 var gulp = require('gulp'),
+    deploy = require('gulp-gh-pages'),
     header = require('gulp-header'),
     minify = require('gulp-minify-css'),
     prefix = require('gulp-autoprefixer'),
@@ -63,6 +64,11 @@ gulp.task('watch', ['build'], function () {
 gulp.task('build', ['clean', 'compile', 'optimize'], function () {
     return gulp.src('./dist/*.css')
         .pipe(size({showFiles: true, gzip: true}))
+});
+
+gulp.task('deploy', function () {
+    return gulp.src(['./test/*', './dist/*'], {base: '.'})
+        .pipe(deploy({message: 'Update demo page'}));
 });
 
 gulp.task('default', ['build']);

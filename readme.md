@@ -83,6 +83,9 @@ Let's see some examples.
     </div>
     ```
 
+You can see it in action on the
+[test page](https://mercadolibre.github.io/mesh/test/test.html).
+
 ## Options
 
 Size, keys and class names:
