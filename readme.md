@@ -107,8 +107,9 @@ its values, we assume you know how to do it. Knock yourself up!
 
 ## Contributing
 
-Contributions are welcome! Please, read the
-[contribution guidelines](contributing.md) first.
+If you find a bug, please report it on the [issue tracker](issues/new).
+In case you want to fix an issue or implement a new feature, make sure that
+you have read the [contribution guidelines](contributing.md) first.
 
 ## License
 
