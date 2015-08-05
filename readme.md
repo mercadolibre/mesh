@@ -105,6 +105,21 @@ If you want to customize Mesh, you only need [Node](https://nodejs.org/)
 Since the only thing that you'll probably be modifying is the `$mesh` map and
 its values, we assume you know how to do it. Knock yourself up!
 
+## Browser support
+
+We aim to support the following browsers:
+
+- Chrome *latest 5*
+- Firefox *latest 5*
+- Internet Explorer *8+*
+- Opera *latest 5*
+- Safari *6+*
+- iOS Safari *6+*
+- Android Browser *2.1+*
+
+While Mesh might work fine in other browsers or older versions, we can only
+ensure that it will do it seamless in the above.
+
 ## Contributing
 
 If you find a bug, please report it on the [issue tracker](issues/new).
