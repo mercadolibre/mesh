@@ -36,7 +36,7 @@ var headerShort = '/*! <%= package.name %> v<%= package.version %> | <%= package
 /* > Tasks
    ---------------------------------------------------------------- */
 
-gulp.task('compile', function() {
+gulp.task('compile', function () {
     return gulp.src('./src/*.scss')
         .pipe(preprocess({outputStyle: 'expanded', indentWidth: 4, precision: 2}))
         .pipe(prefix({browsers: ['last 5 versions', 'android >= 2.1', '> 1%'], cascade: false}))
@@ -44,7 +44,7 @@ gulp.task('compile', function() {
         .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('optimize', ['compile'], function() {
+gulp.task('optimize', ['compile'], function () {
     return gulp.src('./dist/*.css')
         .pipe(minify())
         .pipe(header(headerShort, {package: mesh}))
@@ -52,15 +52,15 @@ gulp.task('optimize', ['compile'], function() {
         .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('clean', function() {
+gulp.task('clean', function () {
     del(['./dist/*']);
 });
 
-gulp.task('watch', ['build'], function() {
+gulp.task('watch', ['build'], function () {
     gulp.watch('./src/*.scss', ['build']);
 });
 
-gulp.task('build', ['clean', 'compile', 'optimize'], function() {
+gulp.task('build', ['clean', 'compile', 'optimize'], function () {
     return gulp.src('./dist/*.css')
         .pipe(size({showFiles: true, gzip: true}))
 });
