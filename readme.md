@@ -11,7 +11,7 @@ Key features:
 - Fluid columns.
 - Fixed gutters.
 - Infinite nesting.
-- ~542 bytes (minified and gzipped)
+- ~545 bytes (minified and gzipped)
 
 To all that, add progressive enhancement, since Mesh has width-agnostic columns
 to support those old browsers that don't know what media-queries are.
@@ -44,9 +44,9 @@ Let's see some examples.
 
     ```html
     <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--4"> ... </div>
-        <div class="mh-grid__cell mh-grid__cell--4"> ... </div>
-        <div class="mh-grid__cell mh-grid__cell--4"> ... </div>
+        <div class="mh-grid__cell mh-grid__cell--a-4"> ... </div>
+        <div class="mh-grid__cell mh-grid__cell--a-4"> ... </div>
+        <div class="mh-grid__cell mh-grid__cell--a-4"> ... </div>
     </div>
     ```
 
@@ -63,14 +63,14 @@ Let's see some examples.
 
     ```html
     <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--4">
+        <div class="mh-grid__cell mh-grid__cell--a-4">
             <div class="mh-grid">
-                <div class="mh-grid__cell mh-grid__cell--6"> ... </div>
-                <div class="mh-grid__cell mh-grid__cell--6"> ... </div>
+                <div class="mh-grid__cell mh-grid__cell--a-6"> ... </div>
+                <div class="mh-grid__cell mh-grid__cell--a-6"> ... </div>
             </div>
         </div>
-        <div class="mh-grid__cell mh-grid__cell--4"> ... </div>
-        <div class="mh-grid__cell mh-grid__cell--4"> ... </div>
+        <div class="mh-grid__cell mh-grid__cell--a-4"> ... </div>
+        <div class="mh-grid__cell mh-grid__cell--a-4"> ... </div>
     </div>
     ```
 
@@ -78,8 +78,8 @@ Let's see some examples.
 
     ```html
     <div class="mh-grid mh-grid--no-gutter-correction">
-        <div class="mh-grid__cell mh-grid__cell--6"> ... </div>
-        <div class="mh-grid__cell mh-grid__cell--6"> ... </div>
+        <div class="mh-grid__cell mh-grid__cell--a-6"> ... </div>
+        <div class="mh-grid__cell mh-grid__cell--a-6"> ... </div>
     </div>
     ```
 
@@ -89,7 +89,7 @@ Size, keys and class names:
 
 | Size     | Key    | Applies  | Class name           |
 |----------|--------|----------|----------------------|
-| Agnostic | *None* | *Always* | mh-grid__cell--*     |
+| Agnostic | a      | *Always* | mh-grid__cell--a-*   |
 | Smallest | xxs    | ≥ 0px    | mh-grid__cell--xxs-* |
 | Smaller  | xs     | ≥ 320px  | mh-grid__cell--xs-*  |
 | Small    | s      | ≥ 480px  | mh-grid__cell--s-*   |

@@ -35,6 +35,9 @@ $mesh: (
             name: xl,
             value: 1200px
         )
+    ),
+    agnostic: (
+        name: a
     )
 ) !default;
 
@@ -93,7 +96,7 @@ $mesh: (
 // -------------------------------------------- //
 
 @for $columns from 1 through get-mesh-map(properties, columns) {
-    .mh-grid__cell--#{$columns} {
+    .mh-grid__cell--#{get-mesh-map(agnostic, name)}-#{$columns} {
         width: percentage($columns / get-mesh-map(properties, columns));
     }
 }
