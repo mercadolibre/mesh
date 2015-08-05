@@ -1,0 +1,29 @@
+{
+    "name": "Mesh",
+    "description": "A tiny yet powerful grid system",
+    "version": "5.0.0-alpha",
+    "authors": "MercadoLibre",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/mercadolibre/mesh.git"
+    },
+    "keywords": [
+        "grid-system",
+        "grid",
+        "grids",
+        "responsive",
+        "rwd",
+        "sass"
+    ],
+    "main": [
+        "src/mesh.scss",
+        "dist/mesh.css"
+    ],
+    "ignore": [
+        ".*",
+        "contributing.md",
+        "readme.md",
+        "test"
+    ]
+}
