@@ -35,9 +35,6 @@ $mesh: (
             name: xl,
             value: 1200px
         )
-    ),
-    agnostic: (
-        name: a
     )
 ) !default;
 
@@ -58,10 +55,10 @@ $mesh: (
     @return $map;
 }
 
-// > Grid
+// > Row
 // ---------------------------------------------------------------- //
 
-.mh-grid {
+.mesh-row {
     padding: 0;
     // Convert to negative value.
     margin: 0 (get-mesh-map(properties, gutter) * -1);
@@ -77,14 +74,14 @@ $mesh: (
     }
 }
 
-.mh-grid--no-gutter-correction {
+.mesh-row.no-reset {
     margin: 0;
 }
 
-// >> Cells
+// >> Columns
 // ------------------------------------------------------ //
 
-.mh-grid__cell {
+[class*='mesh-col-'] {
     box-sizing: border-box;
     float: left;
     padding: 0 get-mesh-map(properties, gutter);
@@ -92,22 +89,22 @@ $mesh: (
     width: 100%;
 }
 
-// >>> Width-agnostic cells
+// >>> Width-agnostic columns
 // -------------------------------------------- //
 
 @for $columns from 1 through get-mesh-map(properties, columns) {
-    .mh-grid__cell--#{get-mesh-map(agnostic, name)}-#{$columns} {
+    .mesh-col-#{$columns} {
         width: percentage($columns / get-mesh-map(properties, columns));
     }
 }
 
-// >>> Responsive cells
+// >>> Responsive columns
 // -------------------------------------------- //
 
 @each $breakpoint in map-keys(get-mesh-map(breakpoints)) {
     @media only screen and (min-width: get-mesh-map(breakpoints, $breakpoint, value)) {
         @for $columns from 1 through get-mesh-map(properties, columns) {
-            .mh-grid__cell--#{get-mesh-map(breakpoints, $breakpoint, name)}-#{$columns} {
+            .mesh-col-#{get-mesh-map(breakpoints, $breakpoint, name)}-#{$columns} {
                 width: percentage($columns / get-mesh-map(properties, columns));
             }
         }

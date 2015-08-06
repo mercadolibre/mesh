@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mesh v5</title>
+    <title>Mesh v4.2</title>
     <link href="../dist/mesh.min.css" rel="stylesheet" />
 
     <style>
@@ -34,11 +34,11 @@
             margin: 15px 0;
         }
 
-        .mh-grid {
+        .mesh-row {
             background: #fff8b3;
         }
 
-        .mh-grid__cell span {
+        [class*='mesh-col-'] span {
             background: #ffe600;
             color: #888;
             display: block;
@@ -51,365 +51,363 @@
 </head>
 <body>
 
-    <h1>Mesh v5</h1>
+    <h1>Mesh v4.2</h1>
 
     <p>Tests for canonical distribution.</p>
 
-    <h2>Width-agnostic grid — apllies allways</h2>
+    <h2>Width-agnostic columns — apllies allways</h2>
 
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-1"><span>1</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-1"><span>1</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-2"><span>2</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-2"><span>2</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-3"><span>3</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-3"><span>3</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-4"><span>4</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-4"><span>4</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-5"><span>5</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-5"><span>5</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-6"><span>6</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-6"><span>6</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-7"><span>7</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-7"><span>7</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-8"><span>8</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-8"><span>8</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-9"><span>9</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-9"><span>9</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-10"><span>10</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-10"><span>10</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-11"><span>11</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-11"><span>11</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-12"><span>12</span></div>
-    </div>
-
-
-    <h2>Width-agnostic grid with 12 cells each</h2>
-
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-1"><span>1</span></div>
-        <div class="mh-grid__cell mh-grid__cell--a-11"><span>11</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-2"><span>2</span></div>
-        <div class="mh-grid__cell mh-grid__cell--a-10"><span>10</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-3"><span>3</span></div>
-        <div class="mh-grid__cell mh-grid__cell--a-9"><span>9</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-4"><span>4</span></div>
-        <div class="mh-grid__cell mh-grid__cell--a-8"><span>8</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-5"><span>5</span></div>
-        <div class="mh-grid__cell mh-grid__cell--a-7"><span>7</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-6"><span>6</span></div>
-        <div class="mh-grid__cell mh-grid__cell--a-6"><span>6</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-7"><span>7</span></div>
-        <div class="mh-grid__cell mh-grid__cell--a-5"><span>5</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-8"><span>8</span></div>
-        <div class="mh-grid__cell mh-grid__cell--a-4"><span>4</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-9"><span>9</span></div>
-        <div class="mh-grid__cell mh-grid__cell--a-3"><span>3</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-10"><span>10</span></div>
-        <div class="mh-grid__cell mh-grid__cell--a-2"><span>2</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-11"><span>11</span></div>
-        <div class="mh-grid__cell mh-grid__cell--a-1"><span>1</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-12"><span>12</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-12"><span>12</span></div>
     </div>
 
+    <h2>Width-agnostic columns up to 12 for each row</h2>
 
-    <h2>Width-agnostic nested grids</h2>
+    <div class="mesh-row">
+        <div class="mesh-col-1"><span>1</span></div>
+        <div class="mesh-col-11"><span>11</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-2"><span>2</span></div>
+        <div class="mesh-col-10"><span>10</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-3"><span>3</span></div>
+        <div class="mesh-col-9"><span>9</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-4"><span>4</span></div>
+        <div class="mesh-col-8"><span>8</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-5"><span>5</span></div>
+        <div class="mesh-col-7"><span>7</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-6"><span>6</span></div>
+        <div class="mesh-col-6"><span>6</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-7"><span>7</span></div>
+        <div class="mesh-col-5"><span>5</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-8"><span>8</span></div>
+        <div class="mesh-col-4"><span>4</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-9"><span>9</span></div>
+        <div class="mesh-col-3"><span>3</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-10"><span>10</span></div>
+        <div class="mesh-col-2"><span>2</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-11"><span>11</span></div>
+        <div class="mesh-col-1"><span>1</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-12"><span>12</span></div>
+    </div>
 
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-5">
+    <h2>Width-agnostic columns with nested rows</h2>
+
+    <div class="mesh-row">
+        <div class="mesh-col-5">
             <span>5</span>
-            <div class="mh-grid">
-                <div class="mh-grid__cell mh-grid__cell--a-6"><span>6 (nested)</span></div>
-                <div class="mh-grid__cell mh-grid__cell--a-6"><span>6 (nested)</span></div>
+            <div class="mesh-row">
+                <div class="mesh-col-6"><span>6 (nested)</span></div>
+                <div class="mesh-col-6"><span>6 (nested)</span></div>
             </div>
         </div>
-        <div class="mh-grid__cell mh-grid__cell--a-7">
+        <div class="mesh-col-7">
             <span>7</span>
-            <div class="mh-grid">
-                <div class="mh-grid__cell mh-grid__cell--a-12"><span>12 (nested)</span></div>
+            <div class="mesh-row">
+                <div class="mesh-col-12"><span>12 (nested)</span></div>
             </div>
         </div>
     </div>
 
 
-    <h2>Width-agnostic grid with no gutter correction</h2>
+    <h2>Width-agnostic columns inside row without gutter correction</h2>
 
-    <div class="mh-grid mh-grid--no-gutter-correction">
-        <div class="mh-grid__cell mh-grid__cell--a-8"><span>8</span></div>
-        <div class="mh-grid__cell mh-grid__cell--a-4"><span>4</span></div>
-    </div>
-
-
-    <h2>Smallest grid — apllies when width ≥ 0</h2>
-
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xxs-1"><span>1</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xxs-2"><span>2</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xxs-3"><span>3</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xxs-4"><span>4</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xxs-5"><span>5</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xxs-6"><span>6</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xxs-7"><span>7</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xxs-8"><span>8</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xxs-9"><span>9</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xxs-10"><span>10</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xxs-11"><span>11</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xxs-12"><span>12</span></div>
+    <div class="mesh-row no-reset">
+        <div class="mesh-col-8"><span>8</span></div>
+        <div class="mesh-col-4"><span>4</span></div>
     </div>
 
 
-    <h2>Smaller grid — apllies when width ≥ 320px</h2>
+    <h2>Smallest columns — apllies when width ≥ 0</h2>
 
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xs-1"><span>1</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-1"><span>1</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xs-2"><span>2</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-2"><span>2</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xs-3"><span>3</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-3"><span>3</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xs-4"><span>4</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-4"><span>4</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xs-5"><span>5</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-5"><span>5</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xs-6"><span>6</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-6"><span>6</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xs-7"><span>7</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-7"><span>7</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xs-8"><span>8</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-8"><span>8</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xs-9"><span>9</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-9"><span>9</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xs-10"><span>10</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-10"><span>10</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xs-11"><span>11</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-11"><span>11</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xs-12"><span>12</span></div>
-    </div>
-
-
-    <h2>Small grid — apllies when width ≥ 480px</h2>
-
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--s-1"><span>1</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--s-2"><span>2</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--s-3"><span>3</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--s-4"><span>4</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--s-5"><span>5</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--s-6"><span>6</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--s-7"><span>7</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--s-8"><span>8</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--s-9"><span>9</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--s-10"><span>10</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--s-11"><span>11</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--s-12"><span>12</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-12"><span>12</span></div>
     </div>
 
 
-    <h2>Medium grid — apllies when width ≥ 768px</h2>
+    <h2>Smaller columns — apllies when width ≥ 320px</h2>
 
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--m-1"><span>1</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-1"><span>1</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--m-2"><span>2</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-2"><span>2</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--m-3"><span>3</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-3"><span>3</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--m-4"><span>4</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-4"><span>4</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--m-5"><span>5</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-5"><span>5</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--m-6"><span>6</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-6"><span>6</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--m-7"><span>7</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-7"><span>7</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--m-8"><span>8</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-8"><span>8</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--m-9"><span>9</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-9"><span>9</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--m-10"><span>10</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-10"><span>10</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--m-11"><span>11</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-11"><span>11</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--m-12"><span>12</span></div>
-    </div>
-
-
-    <h2>Large grid — apllies when width ≥ 1024px</h2>
-
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--l-1"><span>1</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--l-2"><span>2</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--l-3"><span>3</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--l-4"><span>4</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--l-5"><span>5</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--l-6"><span>6</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--l-7"><span>7</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--l-8"><span>8</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--l-9"><span>9</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--l-10"><span>10</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--l-11"><span>11</span></div>
-    </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--l-12"><span>12</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-12"><span>12</span></div>
     </div>
 
 
-    <h2>Larger grid — apllies when width ≥ 1200px</h2>
+    <h2>Small columns — apllies when width ≥ 480px</h2>
 
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xl-1"><span>1</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-1"><span>1</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xl-2"><span>2</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-2"><span>2</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xl-3"><span>3</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-3"><span>3</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xl-4"><span>4</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-4"><span>4</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xl-5"><span>5</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-5"><span>5</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xl-6"><span>6</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-6"><span>6</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xl-7"><span>7</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-7"><span>7</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xl-8"><span>8</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-8"><span>8</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xl-9"><span>9</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-9"><span>9</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xl-10"><span>10</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-10"><span>10</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xl-11"><span>11</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-11"><span>11</span></div>
     </div>
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--xl-12"><span>12</span></div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-12"><span>12</span></div>
+    </div>
+
+
+    <h2>Medium columns — apllies when width ≥ 768px</h2>
+
+    <div class="mesh-row">
+        <div class="mesh-col-m-1"><span>1</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-2"><span>2</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-3"><span>3</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-4"><span>4</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-5"><span>5</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-6"><span>6</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-7"><span>7</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-8"><span>8</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-9"><span>9</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-10"><span>10</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-11"><span>11</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-12"><span>12</span></div>
+    </div>
+
+
+    <h2>Large columns — apllies when width ≥ 1024px</h2>
+
+    <div class="mesh-row">
+        <div class="mesh-col-l-1"><span>1</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-2"><span>2</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-3"><span>3</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-4"><span>4</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-5"><span>5</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-6"><span>6</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-7"><span>7</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-8"><span>8</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-9"><span>9</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-10"><span>10</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-11"><span>11</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-12"><span>12</span></div>
+    </div>
+
+
+    <h2>Larger columns — apllies when width ≥ 1200px</h2>
+
+    <div class="mesh-row">
+        <div class="mesh-col-xl-1"><span>1</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-2"><span>2</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-3"><span>3</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-4"><span>4</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-5"><span>5</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-6"><span>6</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-7"><span>7</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-8"><span>8</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-9"><span>9</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-10"><span>10</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-11"><span>11</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-12"><span>12</span></div>
     </div>
 
     <small>© 2013-2015, MercadoLibre. Released under the MIT license.</small>

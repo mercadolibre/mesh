@@ -11,7 +11,7 @@ Key features:
 - Fluid columns.
 - Fixed gutters.
 - Infinite nesting.
-- ~545 bytes (minified and gzipped)
+- ~541 bytes (minified and gzipped)
 
 To all that, add progressive enhancement, since Mesh has width-agnostic columns
 to support those old browsers that don't know what media-queries are.
@@ -29,57 +29,57 @@ it into your project.
 
 It's important to keep in mind that:
 
-- A grid contains a given number of cells —up to 12.
-- The size of each cell can be defined for every breakpoint.
-- Grids can only have cells as (first) child.
-- Grids or cells should never be styled.
-- Grids can be nested.
-- The content goes inside the cells.
+- A row contains a given number of columns —up to 12.
+- The size of each column can be defined for every breakpoint.
+- Rows can only have columns as (first) child.
+- Rows or columns should never be styled.
+- Rows can be nested.
+- The content goes inside the columns.
 
 ### Examples
 
 Let's see some examples.
 
-- A grid with width-agnostic cells:
+- A row with width-agnostic columns:
 
     ```html
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-4"> ... </div>
-        <div class="mh-grid__cell mh-grid__cell--a-4"> ... </div>
-        <div class="mh-grid__cell mh-grid__cell--a-4"> ... </div>
+    <div class="mesh-row">
+        <div class="mesh-col-4"> ... </div>
+        <div class="mesh-col-4"> ... </div>
+        <div class="mesh-col-4"> ... </div>
     </div>
     ```
 
 - Columns with different sizes for small and large breakpoints:
 
     ```html
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--s-12 mh-grid__cell--l-3"> ... </div>
-        <div class="mh-grid__cell mh-grid__cell--s-12 mh-grid__cell--l-9"> ... </div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-12 mesh-col-l-3"> ... </div>
+        <div class="mesh-col-s-12 mesh-col-l-9"> ... </div>
     </div>
     ```
 
-- A nested grid:
+- A nested row:
 
     ```html
-    <div class="mh-grid">
-        <div class="mh-grid__cell mh-grid__cell--a-4">
-            <div class="mh-grid">
-                <div class="mh-grid__cell mh-grid__cell--a-6"> ... </div>
-                <div class="mh-grid__cell mh-grid__cell--a-6"> ... </div>
+    <div class="mesh-row">
+        <div class="mesh-col-4">
+            <div class="mesh-row">
+                <div class="mesh-col-6"> ... </div>
+                <div class="mesh-col-6"> ... </div>
             </div>
         </div>
-        <div class="mh-grid__cell mh-grid__cell--a-4"> ... </div>
-        <div class="mh-grid__cell mh-grid__cell--a-4"> ... </div>
+        <div class="mesh-col-4"> ... </div>
+        <div class="mesh-col-4"> ... </div>
     </div>
     ```
 
-- Grid without gutter correction:
+- Row without gutter correction:
 
     ```html
-    <div class="mh-grid mh-grid--no-gutter-correction">
-        <div class="mh-grid__cell mh-grid__cell--a-6"> ... </div>
-        <div class="mh-grid__cell mh-grid__cell--a-6"> ... </div>
+    <div class="mesh-row no-reset">
+        <div class="mesh-col-6"> ... </div>
+        <div class="mesh-col-6"> ... </div>
     </div>
     ```
 
@@ -90,15 +90,15 @@ You can see it in action on the
 
 Size, keys and class names:
 
-| Size     | Key    | Applies  | Class name           |
-|----------|--------|----------|----------------------|
-| Agnostic | a      | *Always* | mh-grid__cell--a-*   |
-| Smallest | xxs    | ≥ 0px    | mh-grid__cell--xxs-* |
-| Smaller  | xs     | ≥ 320px  | mh-grid__cell--xs-*  |
-| Small    | s      | ≥ 480px  | mh-grid__cell--s-*   |
-| Medium   | m      | ≥ 768px  | mh-grid__cell--m-*   |
-| Large    | l      | ≥ 1024px | mh-grid__cell--l-*   |
-| Larger   | xl     | ≥ 1200px | mh-grid__cell--xl-*  |
+| Size     | Key    | Applies  | Class name     |
+|----------|--------|----------|----------------|
+| Agnostic | *None* | *Always* | mesh-col-*     |
+| Smallest | xxs    | ≥ 0px    | mesh-col-xxs-* |
+| Smaller  | xs     | ≥ 320px  | mesh-col-xs-*  |
+| Small    | s      | ≥ 480px  | mesh-col-s-*   |
+| Medium   | m      | ≥ 768px  | mesh-col-m-*   |
+| Large    | l      | ≥ 1024px | mesh-col-l-*   |
+| Larger   | xl     | ≥ 1200px | mesh-col-xl-*  |
 
 ## Customization
 
