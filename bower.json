@@ -9,16 +9,16 @@
         "url": "git://github.com/mercadolibre/mesh.git"
     },
     "keywords": [
-        "grid-system",
         "grid",
+        "grid-system",
         "grids",
         "responsive",
         "rwd",
         "sass"
     ],
     "main": [
-        "src/mesh.scss",
-        "dist/mesh.css"
+        "dist/mesh.css",
+        "src/mesh.scss"
     ],
     "ignore": [
         ".*",
