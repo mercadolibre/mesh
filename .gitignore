@@ -1,8 +1,26 @@
-node_modules
-npm-debug.log
-.tmp
-src/bower_components
-test/bower_components
+# OS
+._*
 .DS_Store
-.jshintrc
-thumb.db
+Thumbs.db
+
+# Editor
+*.sublime*
+*.swo
+*.swp
+.cache
+.idea
+.project
+.settings
+.tmproj
+
+# Packages
+bower_components
+node_modules
+
+# Others
+*.diff
+*.err
+*.log
+*.orig
+*.rej
+.publish

@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mesh v4.2</title>
+    <link href="../dist/mesh.min.css" rel="stylesheet" />
+
+    <style>
+
+        /**
+         * Testing styles.
+         */
+
+        html {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            color: #666;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            margin: 0;
+            padding: 0 15px;
+        }
+
+        h2 {
+            margin: 3.32em 0 .83em;
+        }
+
+        p + h2 {
+            margin-top: 1.66em;
+        }
+
+        small {
+            display: block;
+            font-size: inherit;
+            margin: 15px 0;
+        }
+
+        .mesh-row {
+            background: #fff8b3;
+        }
+
+        [class*='mesh-col-'] span {
+            background: #ffe600;
+            color: #888;
+            display: block;
+            margin: 15px 0;
+            padding: 15px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Mesh v4.2</h1>
+
+    <p>Tests for canonical distribution.</p>
+
+    <h2>Width-agnostic columns — applies always</h2>
+
+    <div class="mesh-row">
+        <div class="mesh-col-1"><span>1</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-2"><span>2</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-3"><span>3</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-4"><span>4</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-5"><span>5</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-6"><span>6</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-7"><span>7</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-8"><span>8</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-9"><span>9</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-10"><span>10</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-11"><span>11</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-12"><span>12</span></div>
+    </div>
+
+    <h2>Width-agnostic columns up to 12 for each row</h2>
+
+    <div class="mesh-row">
+        <div class="mesh-col-1"><span>1</span></div>
+        <div class="mesh-col-11"><span>11</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-2"><span>2</span></div>
+        <div class="mesh-col-10"><span>10</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-3"><span>3</span></div>
+        <div class="mesh-col-9"><span>9</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-4"><span>4</span></div>
+        <div class="mesh-col-8"><span>8</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-5"><span>5</span></div>
+        <div class="mesh-col-7"><span>7</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-6"><span>6</span></div>
+        <div class="mesh-col-6"><span>6</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-7"><span>7</span></div>
+        <div class="mesh-col-5"><span>5</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-8"><span>8</span></div>
+        <div class="mesh-col-4"><span>4</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-9"><span>9</span></div>
+        <div class="mesh-col-3"><span>3</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-10"><span>10</span></div>
+        <div class="mesh-col-2"><span>2</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-11"><span>11</span></div>
+        <div class="mesh-col-1"><span>1</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-12"><span>12</span></div>
+    </div>
+
+    <h2>Width-agnostic columns with nested rows</h2>
+
+    <div class="mesh-row">
+        <div class="mesh-col-5">
+            <span>5</span>
+            <div class="mesh-row">
+                <div class="mesh-col-6"><span>6 (nested)</span></div>
+                <div class="mesh-col-6"><span>6 (nested)</span></div>
+            </div>
+        </div>
+        <div class="mesh-col-7">
+            <span>7</span>
+            <div class="mesh-row">
+                <div class="mesh-col-12"><span>12 (nested)</span></div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2>Width-agnostic columns inside row without gutter correction</h2>
+
+    <div class="mesh-row no-reset">
+        <div class="mesh-col-8"><span>8</span></div>
+        <div class="mesh-col-4"><span>4</span></div>
+    </div>
+
+
+    <h2>Smallest columns — applies when width ≥ 0</h2>
+
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-1"><span>1</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-2"><span>2</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-3"><span>3</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-4"><span>4</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-5"><span>5</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-6"><span>6</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-7"><span>7</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-8"><span>8</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-9"><span>9</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-10"><span>10</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-11"><span>11</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xxs-12"><span>12</span></div>
+    </div>
+
+
+    <h2>Smaller columns — applies when width ≥ 320px</h2>
+
+    <div class="mesh-row">
+        <div class="mesh-col-xs-1"><span>1</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-2"><span>2</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-3"><span>3</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-4"><span>4</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-5"><span>5</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-6"><span>6</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-7"><span>7</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-8"><span>8</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-9"><span>9</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-10"><span>10</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-11"><span>11</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xs-12"><span>12</span></div>
+    </div>
+
+
+    <h2>Small columns — applies when width ≥ 480px</h2>
+
+    <div class="mesh-row">
+        <div class="mesh-col-s-1"><span>1</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-2"><span>2</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-3"><span>3</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-4"><span>4</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-5"><span>5</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-6"><span>6</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-7"><span>7</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-8"><span>8</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-9"><span>9</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-10"><span>10</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-11"><span>11</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-s-12"><span>12</span></div>
+    </div>
+
+
+    <h2>Medium columns — applies when width ≥ 768px</h2>
+
+    <div class="mesh-row">
+        <div class="mesh-col-m-1"><span>1</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-2"><span>2</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-3"><span>3</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-4"><span>4</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-5"><span>5</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-6"><span>6</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-7"><span>7</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-8"><span>8</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-9"><span>9</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-10"><span>10</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-11"><span>11</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-m-12"><span>12</span></div>
+    </div>
+
+
+    <h2>Large columns — applies when width ≥ 1024px</h2>
+
+    <div class="mesh-row">
+        <div class="mesh-col-l-1"><span>1</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-2"><span>2</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-3"><span>3</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-4"><span>4</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-5"><span>5</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-6"><span>6</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-7"><span>7</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-8"><span>8</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-9"><span>9</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-10"><span>10</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-11"><span>11</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-l-12"><span>12</span></div>
+    </div>
+
+
+    <h2>Larger columns — applies when width ≥ 1200px</h2>
+
+    <div class="mesh-row">
+        <div class="mesh-col-xl-1"><span>1</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-2"><span>2</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-3"><span>3</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-4"><span>4</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-5"><span>5</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-6"><span>6</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-7"><span>7</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-8"><span>8</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-9"><span>9</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-10"><span>10</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-11"><span>11</span></div>
+    </div>
+    <div class="mesh-row">
+        <div class="mesh-col-xl-12"><span>12</span></div>
+    </div>
+
+    <small>© 2013-2015, MercadoLibre. Released under the MIT license.</small>
+
+</body>
+</html>

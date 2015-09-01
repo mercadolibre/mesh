@@ -1,0 +1,113 @@
+////
+// Mesh
+// A tiny yet powerful grid system
+// v4.2.0 | MIT
+//
+
+// > Settings
+// ---------------------------------------------------------------- //
+
+$mesh: (
+    properties: (
+        columns: 12,
+        gutter: 15px
+    ),
+    breakpoints: (
+        smallest: (
+            name: xxs,
+            value: 0
+        ),
+        smaller: (
+            name: xs,
+            value: 320px
+        ),
+        small: (
+            name: s,
+            value: 480px
+        ),
+        medium: (
+            name: m,
+            value: 768px
+        ),
+        large: (
+            name: l,
+            value: 1024px
+        ),
+        larger: (
+            name: xl,
+            value: 1200px
+        )
+    )
+) !default;
+
+// > Helpers
+// ---------------------------------------------------------------- //
+
+@function get-mesh-map($keys...) {
+    $map: $mesh;
+
+    @each $key in $keys {
+        @if map-has-key($map, $key) {
+            $map: map-get($map, $key);
+        } @else {
+            @error 'The `#{$key}` key does not exist in `$mesh` map.';
+        }
+    }
+
+    @return $map;
+}
+
+// > Row
+// ---------------------------------------------------------------- //
+
+.mesh-row {
+    padding: 0;
+    // Convert to negative value.
+    margin: 0 (get-mesh-map(properties, gutter) * -1);
+
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.mesh-row.no-reset {
+    margin: 0;
+}
+
+// >> Columns
+// ------------------------------------------------------ //
+
+[class*='mesh-col-'] {
+    box-sizing: border-box;
+    float: left;
+    padding: 0 get-mesh-map(properties, gutter);
+    width: 100%;
+}
+
+// >>> Width-agnostic columns
+// -------------------------------------------- //
+
+@for $columns from 1 through get-mesh-map(properties, columns) {
+    .mesh-col-#{$columns} {
+        width: percentage($columns / get-mesh-map(properties, columns));
+    }
+}
+
+// >>> Responsive columns
+// -------------------------------------------- //
+
+@each $breakpoint in map-keys(get-mesh-map(breakpoints)) {
+    @media only screen and (min-width: get-mesh-map(breakpoints, $breakpoint, value)) {
+        @for $columns from 1 through get-mesh-map(properties, columns) {
+            .mesh-col-#{get-mesh-map(breakpoints, $breakpoint, name)}-#{$columns} {
+                width: percentage($columns / get-mesh-map(properties, columns));
+            }
+        }
+    }
+}

@@ -1,100 +1,74 @@
 'use strict';
 
-var gulp = require('gulp');
+/* > Settings
+   ---------------------------------------------------------------- */
 
-// load plugins
-var $ = require('gulp-load-plugins')();
+/* >> Modules
+   ------------------------------------------------------ */
 
-gulp.task('styles', function () {
-    return gulp.src('src/styles/mesh.less')
-        .pipe($.less())
-        .pipe($.recess({
-          noOverqualifying: false,
-          noUniversalSelectors: false
-        }))
-        .pipe($.autoprefixer())
-        .pipe(gulp.dest('dist'))
-        .pipe($.size());
+// Gulp
+var gulp = require('gulp'),
+    deploy = require('gulp-gh-pages'),
+    header = require('gulp-header'),
+    minify = require('gulp-minify-css'),
+    prefix = require('gulp-autoprefixer'),
+    preprocess = require('gulp-sass'),
+    rename = require('gulp-rename'),
+    size = require('gulp-size');
+
+// Others
+var del = require('del'),
+    mesh = require('./package.json');
+
+/* >> Headers
+   ------------------------------------------------------ */
+
+var headerLong = [
+    '/**',
+    ' * <%= package.name %>',
+    ' * <%= package.description %>',
+    ' * @version v<%= package.version %>',
+    ' * @license <%= package.license %>',
+    ' */\n\n'
+].join('\n');
+
+var headerShort = '/*! <%= package.name %> v<%= package.version %> | <%= package.license %> */\n';
+
+/* > Tasks
+   ---------------------------------------------------------------- */
+
+gulp.task('compile', function () {
+    return gulp.src('./src/*.scss')
+        .pipe(preprocess({outputStyle: 'expanded', indentWidth: 4, precision: 2}))
+        .pipe(prefix({browsers: ['last 5 versions', 'android >= 2.1', '> 1%'], cascade: false}))
+        .pipe(header(headerLong, {package: mesh}))
+        .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('css-min',['styles'], function () {
-    return gulp.src('dist/mesh.css')
-        .pipe($.csso())
-        .pipe($.rename({
-            suffix: ".min"
-        }))
-        .pipe(gulp.dest('dist'))
-        .pipe($.size());
-});
-
-gulp.task('demo-styles', function () {
-    return gulp.src('src/styles/*.less')
-        .pipe($.less())
-        .pipe($.recess({
-          noOverqualifying: false,
-          noUniversalSelectors: false
-        }))
-        .pipe($.autoprefixer())
-        .pipe(gulp.dest('src/styles/css'));
-});
-
-gulp.task('demo', ['demo-styles'], function () {
-    return gulp.src(['src/*/**', 'src/index.html'])
-        .pipe(gulp.dest('demo'))
-        .pipe($.size());
-});
-
-gulp.task('upload-demo',['demo'], function () {
-    return gulp.src('demo')
-        .pipe($.subtree({
-            message: 'Demo upload'
-        }));
+gulp.task('optimize', ['compile'], function () {
+    return gulp.src('./dist/*.css')
+        .pipe(minify())
+        .pipe(header(headerShort, {package: mesh}))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('clean', function () {
-    return gulp.src(['.tmp', 'dist'], { read: false }).pipe($.clean());
+    del(['./dist/*']);
 });
 
-gulp.task('build', ['css-min']);
-
-gulp.task('default', ['clean'], function () {
-    gulp.start('build');
+gulp.task('watch', ['build'], function () {
+    gulp.watch('./src/*.scss', ['build']);
 });
 
-gulp.task('connect', function () {
-    var connect = require('connect');
-    var app = connect()
-        .use(require('connect-livereload')({ port: 35729 }))
-        .use(connect.static('src'))
-        .use(connect.static('.tmp'))
-        .use(connect.directory('src'));
-
-    require('http').createServer(app)
-        .listen(9000)
-        .on('listening', function () {
-            console.log('Started connect web server on http://localhost:9000');
-        });
+gulp.task('build', ['clean', 'compile', 'optimize'], function () {
+    return gulp.src('./dist/*.css')
+        .pipe(size({showFiles: true, gzip: true}))
 });
 
-gulp.task('serve', ['connect', 'demo-styles'], function () {
-    require('opn')('http://localhost:9000');
+gulp.task('deploy', function () {
+    return gulp.src(['./test/*', './dist/*'], {base: '.'})
+        .pipe(deploy({message: 'Update demo page'}));
 });
 
-
-gulp.task('watch', ['connect', 'serve'], function () {
-    var server = $.livereload();
-
-    // watch for changes
-
-    gulp.watch([
-        'src/*.html',
-        '.tmp/styles/**/*.css',
-        'src/scripts/**/*.js',
-        'src/images/**/*'
-    ]).on('change', function (file) {
-        server.changed(file.path);
-    });
-
-    gulp.watch('src/styles/**/*.less', ['demo-styles']);
-});
-
+gulp.task('default', ['build']);
