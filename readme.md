@@ -125,10 +125,11 @@ ensure that it will do it seamless in the above.
 
 ## Contributing
 
-If you find a bug, please report it on the [issue tracker](issues/new).
+If you find a bug, please report it on the [issue tracker]
+(https://github.com/mercadolibre/mesh/issues).
 In case you want to fix an issue or implement a new feature, make sure that
 you have read the [contribution guidelines](contributing.md) first.
 
-## License
+## License
 
 © 2013-2015 MercadoLibre. Licensed under the [MIT license](license.txt).
