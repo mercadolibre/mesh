@@ -63,7 +63,7 @@ gulp.task('watch', ['build'], function () {
 
 gulp.task('build', ['clean', 'compile', 'optimize'], function () {
     return gulp.src('./dist/*.css')
-        .pipe(size({showFiles: true, gzip: true}))
+        .pipe(size({showFiles: true, gzip: true}));
 });
 
 gulp.task('deploy', function () {
