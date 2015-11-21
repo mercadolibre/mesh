@@ -90,15 +90,15 @@ You can see it in action on the
 
 Size, keys and class names:
 
-| Size     | Key    | Applies  | Class name     |
-|----------|--------|----------|----------------|
-| Agnostic | *None* | *Always* | mesh-col-*     |
-| Smallest | xxs    | ≥ 0px    | mesh-col-xxs-* |
-| Smaller  | xs     | ≥ 320px  | mesh-col-xs-*  |
-| Small    | s      | ≥ 480px  | mesh-col-s-*   |
-| Medium   | m      | ≥ 768px  | mesh-col-m-*   |
-| Large    | l      | ≥ 1024px | mesh-col-l-*   |
-| Larger   | xl     | ≥ 1200px | mesh-col-xl-*  |
+| Size     | Key    | Applies  | Class name       |
+|----------|--------|----------|------------------|
+| Agnostic | *None* | *Always* | `mesh-col-*`     |
+| Smallest | xxs    | ≥ 0px    | `mesh-col-xxs-*` |
+| Smaller  | xs     | ≥ 320px  | `mesh-col-xs-*`  |
+| Small    | s      | ≥ 480px  | `mesh-col-s-*`   |
+| Medium   | m      | ≥ 768px  | `mesh-col-m-*`   |
+| Large    | l      | ≥ 1024px | `mesh-col-l-*`   |
+| Larger   | xl     | ≥ 1200px | `mesh-col-xl-*`  |
 
 ## Customization
 
