@@ -4,7 +4,7 @@
 // v4.2.0 | MIT
 //
 
-// > Settings
+// Settings
 // ---------------------------------------------------------------- //
 
 $mesh: (
@@ -40,7 +40,7 @@ $mesh: (
     )
 ) !default;
 
-// > Helpers
+// Helpers
 // ---------------------------------------------------------------- //
 
 @function get-mesh-map($keys...) {
@@ -57,7 +57,7 @@ $mesh: (
     @return $map;
 }
 
-// > Row
+// Row
 // ---------------------------------------------------------------- //
 
 .mesh-row {
@@ -80,8 +80,8 @@ $mesh: (
     margin: 0;
 }
 
-// >> Columns
-// ------------------------------------------------------ //
+// Columns
+// ---------------------------------------------------------------- //
 
 [class*='mesh-col-'] {
     box-sizing: border-box;
@@ -90,7 +90,7 @@ $mesh: (
     width: 100%;
 }
 
-// >>> Width-agnostic columns
+// Width-agnostic columns
 // -------------------------------------------- //
 
 @for $columns from 1 through get-mesh-map(properties, columns) {
@@ -99,7 +99,7 @@ $mesh: (
     }
 }
 
-// >>> Responsive columns
+// Responsive columns
 // -------------------------------------------- //
 
 @each $breakpoint in map-keys(get-mesh-map(breakpoints)) {
