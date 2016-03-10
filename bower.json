@@ -1,7 +1,7 @@
 {
   "name": "Mesh",
   "description": "A tiny yet powerful grid system",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "authors": "MercadoLibre",
   "license": "MIT",
   "repository": {
