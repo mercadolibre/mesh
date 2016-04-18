@@ -9,15 +9,15 @@
     "url": "git://github.com/mercadolibre/mesh.git"
   },
   "devDependencies": {
-    "del": "^1.2.x",
-    "gulp": "^3.9.x",
-    "gulp-autoprefixer": "^3.0.x",
-    "gulp-gh-pages": "^0.5.x",
-    "gulp-header": "^1.2.x",
-    "gulp-minify-css": "^1.2.x",
-    "gulp-rename": "^1.2.x",
-    "gulp-sass": "^2.2.x",
-    "gulp-size": "^1.2.x"
+    "del": "1.2.x",
+    "gulp": "3.9.x",
+    "gulp-autoprefixer": "3.0.x",
+    "gulp-gh-pages": "0.5.x",
+    "gulp-header": "1.2.x",
+    "gulp-minify-css": "1.2.x",
+    "gulp-rename": "1.2.x",
+    "gulp-sass": "2.2.x",
+    "gulp-size": "1.2.x"
   },
   "engines": {
     "node": ">=0.10.0"
