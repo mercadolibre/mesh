@@ -1,8 +1,8 @@
 {
-  "name": "Mesh",
+  "name": "mesh-grid",
   "description": "A tiny yet powerful grid system",
   "version": "4.2.2",
-  "authors": "MercadoLibre",
+  "authors": "Mercado Libre <chico@mercadolibre.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
