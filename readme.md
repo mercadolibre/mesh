@@ -16,16 +16,22 @@ Key features:
 To all that, add progressive enhancement, since Mesh has width-agnostic columns
 to support those old browsers that don't know what media-queries are.
 
-## Usage
+## Installation
 
-To get started just [download the minified file](dist/mesh.min.css) and include
-it into your project.
+Install it using [npm](https://npmjs.com):
+
+```sh
+npm install mesh-grid
+```
+
+Or simply [download the minified file](dist/mesh.min.css) and include it into
+your project:
 
 ```html
 <link href="styles/mesh.min.css" rel="stylesheet" />
 ```
 
-### How it works
+## Usage
 
 It's important to keep in mind that:
 
@@ -132,4 +138,4 @@ you have read the [contribution guidelines](contributing.md) first.
 
 ## License
 
-© 2013-2016 MercadoLibre. Licensed under the [MIT license](license.txt).
+© 2013-2017 Mercado Libre. Licensed under the [MIT license](license.txt).
