@@ -3,8 +3,7 @@
 A tiny yet powerful grid system.
 
 > **IMPORTANT NOTICE**: this project is deprecated and unmaintained.
-> Only critical bugs will be fixed. Please consider using *Andes* or
-> another alternative instead.
+> Only critical bugs will be fixed.
 
 ## Overview
 
