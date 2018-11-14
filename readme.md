@@ -2,6 +2,9 @@
 
 A tiny yet powerful grid system.
 
+> **IMPORTANT NOTICE**: this project is deprecated and unmaintained.
+> Only critical bugs will be fixed.
+
 ## Overview
 
 Mesh is a 12-column grid system built to help you develop with ease.
